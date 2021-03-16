@@ -122,21 +122,25 @@ export const config = {
           ],
           status: [
             {
+              id: "reject",
               text: "Reject",
               backgroundColor: "#FECFCF",
               icon: faTimesCircle,
             },
             {
+              id: "approve",
               text: "Approve",
               backgroundColor: "#DBDBDB",
               icon: faCheckCircle,
             },
             {
+              id: "appointment",
               text: "Appointment",
               backgroundColor: "#CFD5FE",
               icon: faCalendarPlus,
             },
             {
+              id: "paid",
               text: "Paid",
               backgroundColor: "#CFFEF4",
               icon: faDollarSign,
@@ -236,21 +240,25 @@ export const config = {
           ],
           status: [
             {
+              id: "reject",
               text: "Reject",
               backgroundColor: "#FECFCF",
               icon: faTimesCircle,
             },
             {
+              id: "approve",
               text: "Approve",
               backgroundColor: "#DBDBDB",
               icon: faCheckCircle,
             },
             {
+              id: "appointment",
               text: "Appointment",
               backgroundColor: "#CFD5FE",
               icon: faCalendarPlus,
             },
             {
+              id: "paid",
               text: "Paid",
               backgroundColor: "#CFFEF4",
               icon: faDollarSign,
@@ -351,21 +359,25 @@ export const config = {
           ],
           status: [
             {
+              id: "reject",
               text: "Reject",
               backgroundColor: "#FECFCF",
               icon: faTimesCircle,
             },
             {
+              id: "approve",
               text: "Approve",
               backgroundColor: "#DBDBDB",
               icon: faCheckCircle,
             },
             {
+              id: "appointment",
               text: "Appointment",
               backgroundColor: "#CFD5FE",
               icon: faCalendarPlus,
             },
             {
+              id: "paid",
               text: "Paid",
               backgroundColor: "#CFFEF4",
               icon: faDollarSign,
@@ -461,21 +473,25 @@ export const config = {
           ],
           status: [
             {
+              id: "reject",
               text: "Reject",
               backgroundColor: "#FECFCF",
               icon: faTimesCircle,
             },
             {
+              id: "approve",
               text: "Approve",
               backgroundColor: "#DBDBDB",
               icon: faCheckCircle,
             },
             {
+              id: "appointment",
               text: "Appointment",
               backgroundColor: "#CFD5FE",
               icon: faCalendarPlus,
             },
             {
+              id: "paid",
               text: "Paid",
               backgroundColor: "#CFFEF4",
               icon: faDollarSign,
@@ -584,21 +600,25 @@ export const config = {
           ],
           status: [
             {
+              id: "reject",
               text: "Reject",
               backgroundColor: "#FECFCF",
               icon: faTimesCircle,
             },
             {
+              id: "approve",
               text: "Approve",
               backgroundColor: "#DBDBDB",
               icon: faCheckCircle,
             },
             {
+              id: "appointment",
               text: "Appointment",
               backgroundColor: "#CFD5FE",
               icon: faCalendarPlus,
             },
             {
+              id: "paid",
               text: "Paid",
               backgroundColor: "#CFFEF4",
               icon: faDollarSign,
@@ -642,5 +662,29 @@ export const config = {
     sortIcon: faSortAmountDown,
     searchIcon: faSearch,
     placeHolderText: "Search by name, account number",
+    popup: {
+      approve: {
+        error: {
+          icon: faTimesCircle,
+          color: "#E15137",
+          title: "Payment Approval Permission",
+          description: "You are not authorised to approve the payment for this claim due to the exceed certain amount. Please ask your HORR (Senior DN Manager) for assistance.",
+          actionButton: {
+            backgroundColor: "#4A64D8",
+            text: "OK"
+          }
+        },
+        success: {
+          icon: faCheckCircle,
+          color: "#2DC57C",
+          title: "Approved Successfully",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm",
+          actionButton: {
+            backgroundColor: "#2DC57C",
+            text: "OK"
+          }
+        }
+      }
+    }
   },
 };

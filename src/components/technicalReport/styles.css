@@ -46,16 +46,16 @@
 }
 
 .detailed-report .image-wrapper img {
-  height: 90px;
-  width: 90px;
+  height: 5.5vw;
+  width: 5.5vw;
   margin-right: 8px;
   border-radius: 5px;
   object-fit: cover;
 }
 
 .detailed-report .more-image {
-  height: 90px;
-  width: 90px;
+  height: 5.5vw;
+  width: 5.5vw;
   border: 1px dashed #707070;
   border-radius: 5px;
   display: flex;

@@ -6,6 +6,7 @@ import ReportDetails from "../../components/reportDetails";
 import ProgressCheckList from "../../components/progressCheckList";
 import ButtonList from "../../components/buttonList";
 import GoogleMap from "../../components/googleMap";
+import FullscreenPopup from "../../components/fullScreenPopup";
 
 import getNestedItem from "../../utils/getDeeplyNestedItems";
 
@@ -13,6 +14,7 @@ import "./styles.css";
 
 const Claims = (props) => {
   const { config } = props;
+  const [popupState, setPopupState] = useState(false);
   const [claimsList, setClaimList] = useState(
     config.requestList.map((item) => {
       const link = `/claims/${item.id}`;
@@ -21,6 +23,19 @@ const Claims = (props) => {
       return item;
     })
   );
+
+  const onClickPopupActionButton = () => {
+    setPopupState(false);
+  }
+
+  const onClickProgressButton = (state) => {
+    // logic for authorization error or success
+    if(state && config.popup[state]) {
+      setPopupState(config.popup[state].error);
+    } else {
+      setPopupState(false);
+    }
+  }
 
   const onClickClaim = (cliamSelected) => {
     setClaimList(
@@ -72,6 +87,7 @@ const Claims = (props) => {
                   status={getNestedItem(activeClaim, "progress.status", {
                     fallback: true,
                   })}
+                  onClickButton={onClickProgressButton}
                 />
               </div>
             </div>
@@ -84,6 +100,7 @@ const Claims = (props) => {
       ) : <div className="fallback-right-section">
         Please select a claim to see details  
       </div>}
+      {popupState ? <FullscreenPopup popup={popupState} onClickActionButton={onClickPopupActionButton} /> : null}
     </div>
   );
 };
