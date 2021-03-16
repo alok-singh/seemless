@@ -187,6 +187,7 @@ export const config = {
           topColor: "#30B76A",
           bottomColor: "#32CB71",
         },
+        editIcon: faPencilAlt,
         taskText: "Over Voltage Inspection",
         actionButton: {
           text: "Appointed",
@@ -299,6 +300,7 @@ export const config = {
       },
       {
         id: 3,
+        editIcon: faPencilAlt,
         appointment: {
           date: "25",
           month: "FEB",
@@ -419,6 +421,7 @@ export const config = {
       },
       {
         id: 4,
+        editIcon: faPencilAlt,
         appointment: {
           date: "3",
           month: "MAR",
@@ -540,6 +543,7 @@ export const config = {
       },
       {
         id: 5,
+        editIcon: faPencilAlt,
         appointment: {
           date: "3",
           month: "MAR",
