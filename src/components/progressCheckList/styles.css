@@ -1,0 +1,80 @@
+.progress-checklist {
+  background: #fff;
+  display: inline-block;
+  padding: 16px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px #0000000d;
+}
+
+.progress-checklist .title {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.progress-checklist .checklist-text {
+  display: flex;
+  margin-bottom: 32px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.progress-checklist .checklist-text.done .vertical-line {
+  background: #4964d8;
+}
+
+.progress-checklist .vertical-line {
+  background: #CACACA;
+  height: 38px;
+  width: 2px;
+  position: absolute;
+  top: -37px;
+  left: 14px;
+  z-index: 0;
+}
+
+.progress-checklist .checklist-text:last-child {
+  margin-bottom: 0px;
+}
+
+.progress-checklist .timeline .checklist-text:first-child .vertical-line {
+  display: none;
+}
+
+.progress-checklist .checklist-text > svg {
+  height: 30px;
+  width: 30px !important;
+  background: #CACACA;
+  padding: 8px;
+  border-radius: 50%;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.progress-checklist .checklist-text.done > svg {
+  background: #4964d8;
+}
+
+.progress-checklist .item-right-section {
+  margin-left: 8px;
+}
+
+.progress-checklist .item-text {
+  color: #4964d8;
+  font-size: 13px;
+}
+
+.progress-checklist .item-right-section svg {
+  color: #a8a8a8;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.progress-checklist .item-right-section span {
+  color: #a8a8a8;
+  font-size: 11px;
+  display: inline-block;
+  vertical-align: middle;
+}

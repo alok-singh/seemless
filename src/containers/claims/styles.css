@@ -1,0 +1,110 @@
+.claims-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.claims-container .left-section {
+  background: #F4F7FF;
+  width: 415px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 415px;
+}
+
+.claims-container .top-left {
+  display: flex;
+  align-items: center;
+}
+
+.claims-container .top-panel svg {
+  color: #4686FA;
+  margin-right: 8px;
+}
+
+.claims-container .top-left h1 {
+  color: #000000CC;
+  margin: 0px 8px 0px 0px;
+  font-size: 24px;
+}
+
+.claims-container .top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 32px 8px;
+  flex-wrap: wrap;
+}
+
+.claims-container .search-input {
+  margin-top: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.claims-container .search-input input {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #707070A6;
+  border-radius: 17px;
+  padding: 0px 30px 0px 15px;
+  outline: none;
+}
+
+.claims-container .search-input svg {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #00000063;
+}
+
+.claims-container .card-wrapper {
+  overflow-y: scroll;
+  padding: 24px 32px 0px;
+  flex-grow: 1;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.claims-container .card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.claims-container .card-wrapper {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.claims-container .right-section {
+  flex-grow: 1;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.claims-container .report-checklist-wrapper {
+  display: flex;
+  padding: 16px 16px 0px 16px;
+}
+
+.claims-container .report-details {
+  display: flex;
+}
+
+.claims-container .section-map {
+  flex-grow: 1;
+}
+
+.claims-container .section-map .map-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.claims-container .fallback-right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: #7c7c7c;
+}

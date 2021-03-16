@@ -1,0 +1,92 @@
+.request-card .card-top-section {
+  display: flex;
+}
+
+.request-card .task-text {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.name-section {
+  font-size: 20px;
+}
+
+.notes-text {
+  color: #828282;
+  font-size: 12px;
+  margin: 4px 0px;
+}
+
+.location-section {
+  color: #828282;
+  font-size: 12px;
+  display: flex;
+}
+
+.request-card .location-section svg {
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+.request-card .details-section {
+  flex-grow: 1;
+  padding-left: 8px;
+}
+
+.request-card {
+  padding: 16px;
+  border: 2px solid #4686FA;
+  border-radius: 15px;
+  background: #fff;
+  margin-bottom: 16px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.request-card.active {
+  box-shadow: 0px 0px 20px #4686faf0;
+  border-width: 3px;
+}
+
+.request-card .action-buttom {
+  color: #fff;
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.request-card .card-bottom-section {
+  border-top: 2px solid #4686FA2E;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.request-card .date-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 50px;
+}
+
+.request-card .month {
+  padding: 10px 0px 0px;
+}
+
+.request-card .date {
+  padding: 0px 0px 4px;
+  font-size: 20px;
+}
+
+.request-card .time {
+  padding: 8px 0px;
+}
