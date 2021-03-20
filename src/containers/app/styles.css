@@ -9,3 +9,12 @@ svg {
 #root {
   display: flex;
 }
+
+@media (max-width: 1279px) {
+  #root {
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+}

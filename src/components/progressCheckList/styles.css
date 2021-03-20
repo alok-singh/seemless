@@ -4,6 +4,7 @@
   padding: 16px;
   border-radius: 15px;
   box-shadow: 0px 0px 20px #0000000d;
+  border: 1px solid #eaeaea5e;
 }
 
 .progress-checklist .title {
@@ -77,4 +78,10 @@
   font-size: 11px;
   display: inline-block;
   vertical-align: middle;
+}
+
+@media (max-width: 1279px) {
+  .progress-checklist {
+    width: 100%;
+  }
 }

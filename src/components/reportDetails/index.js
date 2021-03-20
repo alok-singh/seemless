@@ -1,14 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./styles.css";
 
 const ReportDetails = (props) => {
-  const { taskText, customer = {}, notes, progress = {}, editIcon } = props;
+  const { taskText, customer = {}, notes, progress = {}, editIcon, closeIcon, onClickCloseClaim } = props;
 
   return (
     <div className="progress-report">
-      <div className="task-title">{taskText}</div>
+      <Link className="back-icon" to={`/claims`}>
+        <FontAwesomeIcon icon={closeIcon} onClick={onClickCloseClaim} />
+      </Link>
+      <div className="task-title">
+        {taskText}
+      </div>
       <div className="name-section-wrapper">
         <div className="name-section">{customer.name}</div>
         <FontAwesomeIcon icon={editIcon} />

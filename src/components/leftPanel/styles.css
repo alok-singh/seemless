@@ -54,3 +54,36 @@
 .left-panel .link-item.active {
   background: #3572E2;
 }
+
+@media (max-width: 1279px) {
+  .left-panel {
+    display: block;
+    flex-direction: row;
+    width: 100%;
+    max-width: unset;
+    height: auto;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  .left-panel .main-logo-wrapper {
+    margin-bottom: 8px;
+  }
+  .left-panel .links-wrapper {
+    display: flex;
+    margin-top: 0px;
+    flex-grow: 1;
+    justify-content: left;
+  }
+  .left-panel .link-item {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 0px;
+    margin-right: 16px;
+  }
+  .left-panel .link-item svg {
+    font-size: 24px;
+  }
+  .left-panel .link-item div {
+    display: none;
+  }
+}

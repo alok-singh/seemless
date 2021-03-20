@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import RequestCard from "../../components/requestCard";
 import TechnicalReport from "../../components/technicalReport";
@@ -26,16 +26,16 @@ const Claims = (props) => {
 
   const onClickPopupActionButton = () => {
     setPopupState(false);
-  }
+  };
 
   const onClickProgressButton = (state) => {
     // logic for authorization error or success
-    if(state && config.popup[state]) {
+    if (state && config.popup[state]) {
       setPopupState(config.popup[state].error);
     } else {
       setPopupState(false);
     }
-  }
+  };
 
   const onClickClaim = (cliamSelected) => {
     setClaimList(
@@ -49,59 +49,83 @@ const Claims = (props) => {
     );
   };
 
+  const onClickCloseClaim = () => {
+    setClaimList(
+      claimsList.map((item) => {
+        item.isActive = false;
+        return item;
+      })
+    );
+  };
+
   const activeClaim = claimsList.find((item) => item.isActive);
 
   return (
-    <div className="claims-container">
-      <div className="left-section">
-        <div className="top-panel">
-          <div className="top-left">
-            <h1>{config.mainText}</h1>
-            <FontAwesomeIcon icon={config.addIcon} />
+    <>
+      <div className={`claims-container ${activeClaim ? `active` : ``}`}>
+        <div className="left-section">
+          <div className="top-panel">
+            <div className="top-left">
+              <h1>{config.mainText}</h1>
+              <FontAwesomeIcon icon={config.addIcon} />
+            </div>
+            <div className="top-right">
+              <FontAwesomeIcon icon={config.filterIcon} />
+              <FontAwesomeIcon icon={config.sortIcon} />
+            </div>
+            <div className="search-input">
+              <input placeholder={config.placeHolderText} />
+              <FontAwesomeIcon icon={config.searchIcon} />
+            </div>
           </div>
-          <div className="top-right">
-            <FontAwesomeIcon icon={config.filterIcon} />
-            <FontAwesomeIcon icon={config.sortIcon} />
-          </div>
-          <div className="search-input">
-            <input placeholder={config.placeHolderText} />
-            <FontAwesomeIcon icon={config.searchIcon} />
-          </div>
-        </div>
-        <div className="card-wrapper">
-          {claimsList.map((item) => {
-            return (
-              <RequestCard {...item} onClickClaim={() => onClickClaim(item)} />
-            );
-          })}
-        </div>
-      </div>
-      {activeClaim ? (
-        <div className="right-section">
-          <div className="report-details">
-            <div className="checklist-section">
-              <ReportDetails {...(activeClaim || {})} />
-              <div className="report-checklist-wrapper">
-                <ProgressCheckList {...(activeClaim || {})} />
-                <ButtonList
-                  status={getNestedItem(activeClaim, "progress.status", {
-                    fallback: true,
-                  })}
-                  onClickButton={onClickProgressButton}
+          <div className="card-wrapper">
+            {claimsList.map((item) => {
+              return (
+                <RequestCard
+                  {...item}
+                  onClickClaim={() => onClickClaim(item)}
                 />
+              );
+            })}
+          </div>
+        </div>
+        {activeClaim ? (
+          <div className="right-section">
+            <div className="report-details">
+              <div className="checklist-section">
+                <ReportDetails
+                  {...(activeClaim || {})}
+                  onClickCloseClaim={onClickCloseClaim}
+                />
+                <div className="report-checklist-wrapper">
+                  <ProgressCheckList {...(activeClaim || {})} />
+                  <ButtonList
+                    status={getNestedItem(activeClaim, "progress.status", {
+                      fallback: true,
+                    })}
+                    onClickButton={onClickProgressButton}
+                  />
+                </div>
+              </div>
+              <div className="section-map">
+                <GoogleMap {...getNestedItem(activeClaim, "map", {})} />
               </div>
             </div>
-            <div className="section-map">
-              <GoogleMap {...getNestedItem(activeClaim, "map", {})} />
-            </div>
+            <TechnicalReport {...(activeClaim.report || { fallback: true })} />
           </div>
-          <TechnicalReport {...(activeClaim.report || { fallback: true })} />
-        </div>
-      ) : <div className="fallback-right-section">
-        Please select a claim to see details  
-      </div>}
-      {popupState ? <FullscreenPopup popup={popupState} onClickActionButton={onClickPopupActionButton} /> : null}
-    </div>
+        ) : (
+          <div className="fallback-right-section">
+            Please select a claim to see details
+          </div>
+        )}
+      </div>
+      {popupState ? (
+        <FullscreenPopup
+          popup={popupState}
+          onClickActionButton={onClickPopupActionButton}
+        />
+      ) : null}
+    </>
   );
 };
 

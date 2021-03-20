@@ -28,3 +28,24 @@
   flex-grow: 1;
   font-size: 14px;
 }
+
+@media (max-width: 1279px) {
+  .button-list-wrapper {
+    padding-left: 8px;
+    flex-direction: revert;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+  .button-list-wrapper .button-wrapper {
+    display: block;
+    border-radius: 0;
+    margin-right: 4px;
+    margin-bottom: 0px;
+  }
+  .button-list-wrapper .button-wrapper svg {
+    margin-right: 8px;
+  }
+  .button-list-wrapper .button-text {
+    font-size: 12px;
+  }
+}

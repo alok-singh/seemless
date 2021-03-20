@@ -19,6 +19,9 @@ import {
   faTimesCircle,
   faCalendarPlus,
   faDollarSign,
+  faArrowCircleLeft
+
+  // arrow-circle-left
 } from "@fortawesome/free-solid-svg-icons";
 
 export const config = {
@@ -70,6 +73,7 @@ export const config = {
         },
         taskText: "Over Voltage Inspection",
         editIcon: faPencilAlt,
+        closeIcon: faArrowCircleLeft,
         actionButton: {
           text: "New Claim",
           backgroundColor: "#4686FA",
@@ -188,6 +192,7 @@ export const config = {
           bottomColor: "#32CB71",
         },
         editIcon: faPencilAlt,
+        closeIcon: faArrowCircleLeft,
         taskText: "Over Voltage Inspection",
         actionButton: {
           text: "Appointed",
@@ -301,6 +306,7 @@ export const config = {
       {
         id: 3,
         editIcon: faPencilAlt,
+        closeIcon: faArrowCircleLeft,
         appointment: {
           date: "25",
           month: "FEB",
@@ -422,6 +428,7 @@ export const config = {
       {
         id: 4,
         editIcon: faPencilAlt,
+        closeIcon: faArrowCircleLeft,
         appointment: {
           date: "3",
           month: "MAR",
@@ -544,6 +551,7 @@ export const config = {
       {
         id: 5,
         editIcon: faPencilAlt,
+        closeIcon: faArrowCircleLeft,
         appointment: {
           date: "3",
           month: "MAR",
