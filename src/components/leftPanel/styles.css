@@ -64,6 +64,8 @@
     height: auto;
     justify-content: space-between;
     padding: 16px;
+    position: fixed;
+    z-index: 10;
   }
   .left-panel .main-logo-wrapper {
     margin-bottom: 8px;

@@ -115,7 +115,8 @@
     display: flex;
     width: 200%;
     transition-duration: 400ms;
-    height: calc(100vh - 140px);
+    height: auto;
+    padding-top: 140px;
   }
 
   .claims-container.active {
@@ -126,7 +127,7 @@
     width: 100vw;
     border-right: 0;
     min-width: unset;
-    height: calc(100vh - 140px);
+    height: auto;
   }
   .claims-container .top-panel {
     padding: 16px;
@@ -137,6 +138,7 @@
   }
   .claims-container .right-section {
     width: 100vw;
+    max-height: unset;
   }
 
   .claims-container .report-details {

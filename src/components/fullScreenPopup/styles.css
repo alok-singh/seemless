@@ -5,7 +5,7 @@
   right: 0px;
   bottom: 0px;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -59,18 +59,21 @@
 
 
 @media (max-width: 1279px) {
-  .popup-overlay {
-
-  }
   .popup-overlay .popup-container {
     padding: 16px;
-    height: 100vh;
-    width: 100vw;
+    margin: 16px;
+    width: 100%;
+    height: auto;
+  }
+
+  .popup-overlay .title{
+    font-size: 18px;
   }
 
   .popup-overlay .popup-button {
-    right: 16px;
-    bottom: 16px;
+    position: static;
+    text-align: center;
+    margin-top: 24px;
   }
 
 }
